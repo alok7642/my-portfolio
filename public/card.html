@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <title>alert</title>
+    <script>
+        // alert
+        // function DeleteContent() {
+        //     alert("are u sure  ? ");
+        //     card = document.querySelector(".card");
+        //     if (card ) {
+        //         card.style.display = "none";
+        //     }
+        // }
+
+        // confirm
+        function DeleteContent() {
+            result = confirm("are u sure  ? ");
+            if (result == true) {
+                card = document.querySelector(".card");
+                card.style.display = "none";
+            }
+            else {
+                alert("cancelled ")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="border border-3 w-25 h-25 m-5 p-5 card">
+        <h3 class="bg-info text-center text-capitalize">This is a card </h3>
+        <img src="kids-fashion.jpg" height="300px" width="300px" alt=""><br>
+        <button class="btn btn-warning m-2">edit</button>
+        <button onclick="DeleteContent()" class="btn btn-danger m-2">delete</button>
+    </div>
+
+</body>
+
+</html>
