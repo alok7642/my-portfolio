@@ -392,11 +392,12 @@ a {
     background-image: url("images/projects/weatherApi.png");
 }
 #project6{
-    background-image: url('images/projects/nareshYoutube.png');
+    background-image: url('images/projects/emi.png');
+    background-size:fit-content;
 }
 
 #project7{
-    background-image: url('images/projects/apple.png');
+    background-image: url('images/projects/carousel.png');
 }
 .rapidapi{
     width:50px;
