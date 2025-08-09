@@ -38,7 +38,26 @@
                         I'm a software developer, and this is my portfolio website.
                         Here, you'll learn about my journey and projects as a developer.
                     </div>
-                    <div class="btn-pink" id="btn">Hire me</div>
+                    <div style="display: flex; ">
+                        <div>
+                            <a href="alok-new-resume.pdf" download="alok-new-resume" class="download-btn">
+                                📄 Download Resume
+                            </a>
+                        </div>
+
+
+                        <!-- <div class="btn-pink" id="btn">Hire me</div> -->
+
+
+                        <a href="#contacts" class="btn-pink" id="btn" role="button" aria-label="Hire Alok">
+                            Hire me
+                        </a>
+
+
+
+
+
+                    </div>
                 </div>
 
                 <div class="hero-sec">
@@ -288,15 +307,21 @@
                     MyTech Stack
                 </div>
                 <div class="skill-subHeading">
-                    <p> I’m Alok Kumar, a passionate and detail-oriented web developer currently pursuing a B.Tech in
-                        Computer Science from Lakshmi Narain College of Technology University, Bhopal (Graduating in
-                        2025).
+                    <p>
+                        I’m <strong>Alok Kumar</strong>, a web developer (B.Tech, Computer Science — 2025) who builds
+                        responsive,
+                        user-first web applications using React, TypeScript and Node.js.
                     </p><br>
-                    <p>I specialize in building responsive, user-centric web applications using modern technologies like
-                        HTML5, CSS3, JavaScript, Bootstrap, React.js, Node.js, Express.js, and MongoDB.
+                    <p>
+                        I specialize in component-driven frontends, REST APIs with Express, and deploying production
+                        prototypes.
+                        Recently built <a href="https://your-live-project-link" target="_blank"
+                            rel="noopener">AlokMart</a> — a shopping site
+                        with Razorpay payments and automated email confirmations.
                     </p><br>
-                    <p>With strong problem-solving abilities, a team-first attitude, and a constant drive to learn, I
-                        aim to grow as a developer and contribute meaningfully to impactful tech projects.
+                    <p>
+                       I’m looking for internships or junior frontend positions — available to start immediately.
+
                     </p>
                 </div>
             </div>
@@ -330,29 +355,37 @@
             </div>
         </div>
 
-        <div class="contactus-form-container" id="contacts">
-            <div class="container">
-                <h1 class="contactus-heading">Contact me</h1>
-                <h3 class="contactus-subHeading">Questions, thoughts, or just want to say hello?</h3>
-                <form class="formsec" action="">
-                    <div class="formfield-container">
-                        <input type="text" class="formfield" name="name" id="" placeholder="Enter your name" />
+      <div class="contactus-form-container" id="contacts">
+  <div class="container">
+    <h1 class="contactus-heading">Contact me</h1>
+    <h3 class="contactus-subHeading">Questions, thoughts, or just want to say hello?</h3>
 
-                        <input type="email" class="formfield" name="email" id="" placeholder="Enter your email">
+    <!-- CHANGE: add id, action, method -->
+    <form class="formsec" id="contactForm" action="https://formspree.io/f/mldlaebq" method="POST">
+      <div class="formfield-container">
+        <input type="text" class="formfield" name="name" placeholder="Enter your name" required />
 
-                        <input type="text" class="formfield" name="subject" id="" placeholder="Enter your subject">
+        <!-- Formspree expects reply-to email in _replyto to set Reply-To header -->
+        <input type="email" class="formfield" name="_replyto" placeholder="Enter your email" required>
 
-                        <textarea class="textarea" name="message" id="" cols="30" rows="10"
-                            placeholder="Enter your message"></textarea>
+        <input type="text" class="formfield" name="subject" placeholder="Enter your subject">
 
-                    </div>
-                    <button type="submit" class="btn-pink submitbtn" id="submit-btn">
-                        Send Message<i class="submit-icon fa-solid fa-paper-plane"></i>
-                    </button>
+        <textarea class="textarea" name="message" cols="30" rows="10" placeholder="Enter your message" required></textarea>
 
-                </form>
-            </div>
-        </div>
+        <!-- Honeypot to reduce spam (hidden) -->
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      </div>
+
+      <!-- Inline message area (will be shown after submit) -->
+      <div id="formMessage" class="form-message" aria-live="polite" style="display:none; margin-bottom:12px;"></div>
+
+      <button type="submit" class="btn-pink submitbtn" id="submit-btn">
+        Send Message<i class="submit-icon fa-solid fa-paper-plane"></i>
+      </button>
+    </form>
+  </div>
+</div>
+
 
         <footer>
             <div class="container">
@@ -401,6 +434,8 @@
             backDelay: 1000,
         });
     </script>
+
+    <script src="contact.js"></script>
 </body>
 
 </html>
