@@ -45,10 +45,6 @@
                             </a>
                         </div>
 
-
-                        <!-- <div class="btn-pink" id="btn">Hire me</div> -->
-
-
                         <a href="#contacts" class="btn-pink" id="btn" role="button" aria-label="Hire Alok">
                             Hire me
                         </a>
@@ -360,23 +356,19 @@
     <h1 class="contactus-heading">Contact me</h1>
     <h3 class="contactus-subHeading">Questions, thoughts, or just want to say hello?</h3>
 
-    <!-- CHANGE: add id, action, method -->
     <form class="formsec" id="contactForm" action="https://formspree.io/f/mldlaebq" method="POST">
       <div class="formfield-container">
         <input type="text" class="formfield" name="name" placeholder="Enter your name" required />
 
-        <!-- Formspree expects reply-to email in _replyto to set Reply-To header -->
         <input type="email" class="formfield" name="_replyto" placeholder="Enter your email" required>
 
         <input type="text" class="formfield" name="subject" placeholder="Enter your subject">
 
         <textarea class="textarea" name="message" cols="30" rows="10" placeholder="Enter your message" required></textarea>
 
-        <!-- Honeypot to reduce spam (hidden) -->
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       </div>
 
-      <!-- Inline message area (will be shown after submit) -->
       <div id="formMessage" class="form-message" aria-live="polite" style="display:none; margin-bottom:12px;"></div>
 
       <button type="submit" class="btn-pink submitbtn" id="submit-btn">
