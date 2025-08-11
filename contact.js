@@ -9,14 +9,11 @@ document.addEventListener('DOMContentLoaded', function () {
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    // Simple spam honeypot check
     const data = new FormData(form);
     if (data.get('_honey')) {
-      // bot detected — do nothing
       return;
     }
 
-    // UI: disable button and show sending text
     btn.disabled = true;
     const originalBtnHtml = btn.innerHTML;
     btn.innerText = 'Sending...';
@@ -32,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
         showMessage('Message sent! Thank you — I will reply soon.', 'success');
         form.reset();
       } else {
-        // try to get JSON error (Formspree returns JSON on errors too)
         let err = {};
         try { err = await res.json(); } catch (ee) { /* ignore */ }
         console.error('Formspree error:', err);
@@ -45,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
       btn.disabled = false;
       btn.innerHTML = originalBtnHtml;
 
-      // hide the message after 6 seconds
+      //for  hide the message 
       setTimeout(() => {
         hideMessage();
       }, 6000);
@@ -57,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
     messageBox.textContent = text;
     messageBox.classList.remove('success', 'error');
     messageBox.classList.add(type);
-    // basic inline styling (you can move to CSS)
     messageBox.style.padding = '10px 14px';
     messageBox.style.borderRadius = '6px';
     messageBox.style.fontWeight = '600';
