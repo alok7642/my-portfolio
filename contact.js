@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         form.reset();
       } else {
         let err = {};
-        try { err = await res.json(); } catch (ee) { /* ignore */ }
+        try { err = await res.json(); } catch (ee) {  }
         console.error('Formspree error:', err);
         showMessage('Sorry — there was a problem sending your message. Try again later.', 'error');
       }
