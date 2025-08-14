@@ -621,9 +621,9 @@
         /* align-items: center; */
         /* position: relative; */
     }
+    
 
-    .skill-container-left {
-      
+    .skill-container-left {      
         gap: 2rem;
         width: 95%;
         text-align: justify;
@@ -682,10 +682,19 @@
 
     .skill-subHeading {
         width: 100%;
-        display: flex;
-        flex-direction: column;
+        /* display: flex; */
+        /* flex-direction: column; */
         padding: 20px;
 
+    }
+    .skill-container-right{
+        display: flex;
+        flex-direction:column;
+    }
+    .skill-container-right .frontend ,
+    .skill-container-right .backend ,
+    .skill-container-right .tools {
+        display:flex;
     }
 
     .caps {
