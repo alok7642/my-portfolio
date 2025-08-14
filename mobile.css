@@ -695,6 +695,10 @@
     .skill-container-right .backend ,
     .skill-container-right .tools {
         display:flex;
+        border-bottom: 1px solid black;
+    }
+    .mobile-skill{
+        display: block;
     }
 
     .caps {
