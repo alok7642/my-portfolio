@@ -631,7 +631,7 @@
 
     .skill-container-right {
         display: grid;
-        width: 50%;
+        max-width: 90%;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(3, 1fr);
         gap: 10px;
