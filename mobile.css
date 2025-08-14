@@ -231,7 +231,8 @@
     }
 
     .userImg {
-        padding: 2.5rem;
+        height: auto;
+        width: 250px;
         filter: grayscale(1);
         transition: all 1s;
         animation: scaleImage 5s linear infinite;
@@ -262,7 +263,7 @@
 
 
     .icon-dots {
-        z-index: 9;
+        z-index: 2;
         bottom: -1rem;
         right: 0;
         animation-name: dotAnimation;
@@ -350,16 +351,16 @@
         }
     }
 
-    .faded-text {
-        margin-top: 20px;
-    position: absolute;
-    user-select: none;
-    font-size: 5em;
-    color: rgb(231, 231, 231);
-    bottom: -30%;
-    font-weight: bold;
-    transition: all 3s;
-}
+ .faded-text {
+        position: absolute;
+        user-select: none;
+        font-size: 4em;
+        color: rgb(231, 231, 231);
+        bottom: -13%;
+        left: 5%;
+        font-weight: bold;
+        transition: all 3s;
+    }
 
     .project-section {
         background-color: rgb(231, 231, 231);
@@ -755,7 +756,7 @@
     }
 
     textarea {
-        height: auto;
+        height: 100px;
         padding-top: 1rem;
         width: 100%;
         font-size: 18px;
